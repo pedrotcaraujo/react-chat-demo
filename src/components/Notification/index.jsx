@@ -1,5 +1,6 @@
 import React from 'react';
-import MessagesStore from '../stores/MessagesStore.js'
+import MessagesStore from 'stores/MessagesStore.js'
+import style from './style.css'
 
 class Notification extends React.Component {
 	constructor(props) {
@@ -11,7 +12,6 @@ class Notification extends React.Component {
 			messages: MessagesStore.getMessages()
 		})
 		MessagesStore.addChangeListener(() => {
-			console.log('oi')
 			this.setState({
 				messages: MessagesStore.getMessages()
 			})
@@ -20,8 +20,8 @@ class Notification extends React.Component {
 
 	render() {
 		return (
-			<div>
-				{this.state.messages.length}
+			<div className={style.text}>
+				{this.props.number}
 			</div>
 			)
 	}

@@ -1,4 +1,4 @@
-import MessagesDispatcher from '../dispatchers/MessagesDispatcher.js';
+import MessagesDispatcher from 'dispatchers/MessagesDispatcher.js';
 import EventEmitter from 'events';
 
 let messages = [];

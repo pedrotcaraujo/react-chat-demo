@@ -1,12 +1,12 @@
 import React from 'react';
-import Chat from './Chat.jsx';
-import Notification from './Notification.jsx';
+import Chat from 'components/Chat';
+import Notification from 'components/Notification';
 
 class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			numberOfMessages: 3
+			numberOfMessages: 0
 		}
 
 		this.receiveNumber = this.receiveNumber.bind(this);
